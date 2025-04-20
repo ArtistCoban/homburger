@@ -6,6 +6,9 @@
 [Ll]ogs/
 UserSettings/
 
+.vs/
+.vscode/
+
 *.csproj
 *.unityproj
 *.sln
@@ -17,6 +20,6 @@ UserSettings/
 *.booproj
 *.svd
 
-# OS dosyaları
 .DS_Store
 Thumbs.db
+
