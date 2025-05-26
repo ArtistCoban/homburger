@@ -26,11 +26,9 @@ public class MusteriYurume : MonoBehaviour
         // Hedefe doğru ilerleme
         Vector2 pozisyon = Vector2.MoveTowards(transform.position, hedef.position, hareketHizi * Time.deltaTime);
 
-        // Hareket varsa animasyonu ayarla
         Vector2 hareket = hedef.position - transform.position;
         float mesafe = hareket.magnitude;
 
-        // Eğer bekleme süresi başlamadıysa veya müşteri çıkıyorsa hareket etsin
         if (!tezgahaVardi || cikiyor)
         {
             transform.position = pozisyon;
@@ -50,13 +48,11 @@ public class MusteriYurume : MonoBehaviour
             tezgahaVardi = true;
             beklemeSayaci = beklemeSuresi;
 
-            // Pozisyonu düzle ve idle animasyona geç
+            // idle animasyona geç
             transform.position = hedefTezgah.position;
             animator.SetFloat("Speed", 0f);
             animator.SetFloat("Vertical", 0f);
         }
-
-        // Bekleme süresi bitince çıkışa geç
         if (tezgahaVardi && beklemeSayaci > 0)
         {
             beklemeSayaci -= Time.deltaTime;

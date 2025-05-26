@@ -8,6 +8,7 @@ public class OyuncuKontrol : MonoBehaviour
     Animator animator;
     public float moveSpeed = 3.0f;
     Vector2 movement;
+    Vector2 lastMoveDirection = Vector2.down;
     SpriteRenderer rbSprite;
     void Start()
     {
@@ -22,6 +23,13 @@ public class OyuncuKontrol : MonoBehaviour
         animator.SetFloat("Horizontal",movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+        if (movement != Vector2.zero)
+        {
+            lastMoveDirection = movement.normalized;
+        }
+
+        animator.SetFloat("IdleX", lastMoveDirection.x);
+        animator.SetFloat("IdleY", lastMoveDirection.y);
     }
     void FixedUpdate()
     {
