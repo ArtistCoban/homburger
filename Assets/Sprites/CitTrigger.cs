@@ -19,6 +19,7 @@ public class CitTrigger : MonoBehaviour
                 {
                     closedDoor.SetActive(false);
                     openedDoor.SetActive(true);
+                    inventory.kapiyiActi = true;
                 }
             }
         }

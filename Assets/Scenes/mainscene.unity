@@ -4202,18 +4202,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6834354124477613894, guid: 5983af5904fc55c4ba955d2d6dedb8f8, type: 3}
-      propertyPath: m_Size.x
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834354124477613894, guid: 5983af5904fc55c4ba955d2d6dedb8f8, type: 3}
-      propertyPath: m_Size.y
-      value: 0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 6834354124477613894, guid: 5983af5904fc55c4ba955d2d6dedb8f8, type: 3}
-      propertyPath: m_Offset.x
-      value: -0
-      objectReference: {fileID: 0}
     - target: {fileID: 8988293080431906526, guid: 5983af5904fc55c4ba955d2d6dedb8f8, type: 3}
       propertyPath: m_Name
       value: butcheroyun_chef
@@ -4221,29 +4209,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8988293080431906526, guid: 5983af5904fc55c4ba955d2d6dedb8f8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7063121266052126824}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5983af5904fc55c4ba955d2d6dedb8f8, type: 3}
---- !u!1 &7063121266052126823 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8988293080431906526, guid: 5983af5904fc55c4ba955d2d6dedb8f8, type: 3}
-  m_PrefabInstance: {fileID: 7063121266052126822}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7063121266052126824
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7063121266052126823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12d4345d5f5320d4297c5636ed505b02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hasKey: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
