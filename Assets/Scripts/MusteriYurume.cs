@@ -13,7 +13,6 @@ public class MusteriYurume : MonoBehaviour
     private bool tezgahaVardi = false;
     private bool cikiyor = false;
     private float beklemeSayaci = 0f;
-
     void Start()
     {
         animator = GetComponent<Animator>();
