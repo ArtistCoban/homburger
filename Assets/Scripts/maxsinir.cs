@@ -8,7 +8,7 @@ public class maxsinir : MonoBehaviour
     void Update()
     {
         string currentScene = SceneManager.GetActiveScene().name;
-        if (currentScene == "mainscene")
+        if (currentScene == "mainscene" || currentScene == "lastscene")
         {
             if (transform.position.y < -1.56f)
             {

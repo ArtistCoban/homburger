@@ -5,13 +5,26 @@ using UnityEngine.SceneManagement;
 
 public class DoorTrigger : MonoBehaviour
 {
-    public string sceneToLoad = "SecondScene"; 
+    public Animator transition;
+    public float transitionTime = 1f;
+    private bool isLoading = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (!isLoading && other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            isLoading = true;
+            LoadNextLevel();
         }
+    }
+    public void LoadNextLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));    
+    }
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+        yield return new WaitForSeconds(transitionTime);
+        SceneManager.LoadScene(levelIndex);
     }
 }
