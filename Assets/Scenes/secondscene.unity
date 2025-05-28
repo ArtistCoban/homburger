@@ -3407,6 +3407,7 @@ GameObject:
   - component: {fileID: 401934502}
   - component: {fileID: 401934503}
   - component: {fileID: 401934504}
+  - component: {fileID: 401934505}
   m_Layer: 0
   m_Name: inek
   m_TagString: Untagged
@@ -3595,6 +3596,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &401934505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401934498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2842c08152ba5438cc7faff7f8be2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  etPrefab: {fileID: 7993100445338077781, guid: 40abb3ec56f43ff4e8bae6a135efe592, type: 3}
 --- !u!1 &429289340
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,7 +4702,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1671524160}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2d2e93c33d1ac542a25bc61715a78dc, type: 3}
+  m_Script: {fileID: 11500000, guid: be6c5a39aca03b749b6d64a5e004160e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 1546890162}

@@ -7,12 +7,21 @@ public class FirinKontrol : MonoBehaviour
     public GameObject firinKapali;
     public GameObject firinAcik;
     public Transform player;
-    public float etkileşimMesafesi = 0.05f;
+    public GameObject hamburgerPrefab;
+    public Transform hamburgerSpawnNoktasi;
+    public float etkileşimMesafesi = 0.5f;
+
     private bool acikMi = false;
+    private bool hamburgerDroplandimi = false;
+    private bool fırınKullanildi = false;
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Sol tıklama
+        if (fırınKullanildi)
+        {
+            return;
+        }
+        if (Input.GetKeyDown(KeyCode.E))
         {
             float uzaklik = Vector2.Distance(player.position, transform.position);
             if (uzaklik <= etkileşimMesafesi)
@@ -26,7 +35,23 @@ public class FirinKontrol : MonoBehaviour
     {
         acikMi = !acikMi;
 
-        firinAcik.SetActive(!acikMi);
-        firinKapali.SetActive(acikMi);
+        firinAcik.SetActive(acikMi);
+        firinKapali.SetActive(!acikMi);
+
+        if (acikMi && !hamburgerDroplandimi)
+        {
+            StartCoroutine(Hamburgeri5SaniyeSonraDropEt());
+        }
+    }
+
+    IEnumerator Hamburgeri5SaniyeSonraDropEt()
+    {
+        hamburgerDroplandimi = true;
+        yield return new WaitForSeconds(5f);
+        Vector3 konum = hamburgerSpawnNoktasi.position;
+        Instantiate(hamburgerPrefab, konum, Quaternion.identity);
+        firinKapali.SetActive(true);
+        firinAcik.SetActive(false);
+        fırınKullanildi = true;
     }
 }

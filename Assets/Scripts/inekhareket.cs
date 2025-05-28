@@ -112,4 +112,8 @@ public class inekhareket : MonoBehaviour
         boxCollider.isTrigger = isMoving;
         previousPosition = currentPosition;
     }
+    public bool InekDuruyorMu()
+    {
+        return Vector2.Distance(Rigidbody2D.position, previousPosition) <= 0.001f;
+    }
 }
